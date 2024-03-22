@@ -1,0 +1,138 @@
+/* font-family: "Big Shoulders Display", sans-serif; */
+/* font-family: "Lexend Deca", sans-serif; */
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --paragraphs-color: hsla(0, 0%, 100%, 0.75);
+    --bg-h-b: hsl(0, 0%, 95%);
+
+    --ff-header: "Big Shoulders Display", sans-serif;
+    --ff-paragraphs: "Lexend Deca", sans-serif;
+
+    --fw-header: 700;
+    --fw-paragraphs: 400;
+
+    --fs-100: 0.9375rem;
+    --fs-200: 2.55rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    font-family: var(--ff-paragraphs);
+    font-size: var(--fs-100);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+footer {
+    margin-block-start: 2rem;
+}
+
+h1 {
+    font-family: var(--ff-header);
+    font-size: var(--fs-200);
+    margin-block-end: 2rem;
+    text-transform: uppercase;
+    color: var(--bg-h-b);
+    margin-block-start: 1.9rem;
+}
+
+p {
+    color: var(--paragraphs-color);
+    line-height: 1.6rem;
+    margin-block-end: 2rem;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 920px
+}
+
+@media (max-width: 769px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+    }
+
+    .col:nth-child(1){
+        border-radius: .5rem .5rem 0 0;
+    }
+
+    .col:nth-child(3) {
+        border-radius: 0 0 .5rem .5rem;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .col:nth-child(1){
+        border-radius: .5rem 0 0 .5rem;
+    }
+
+    .col:nth-child(3) {
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    p {
+        color: var(--paragraphs-color);
+        line-height: 1.6rem;
+        margin-block-end: 5rem;
+    }
+}
+
+.col {
+    padding: 3rem;
+}
+
+.btn {
+    background: var(--bg-h-b);
+    text-decoration: none;
+    padding: .8725rem 2.125rem;
+    border-radius: 3rem;
+    color: inherit;
+    line-height: 2.5;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: inherit;
+    color: var(--bg-h-b);
+    border: 2px solid var(--bg-h-b);
+}
+
+.col:nth-child(1) {
+    background: var(--bright-orange);
+    color: var(--bright-orange);
+}
+
+.col:nth-child(2) {
+    background: var(--dark-cyan);
+    color: var(--dark-cyan);
+}
+
+.col:nth-child(3) {
+    background: var(--very-dark-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: crimson;
+}
